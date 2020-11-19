@@ -5,30 +5,32 @@
 <title>お問い合わせフォーム</title>
 <link rel="stylesheet" href="paircontact.css">
 </head>
-<body>
 
+<body>
 <div id="company_name"><h1>Company Name</h1></div>
-<div id="contact"><form action="confirm.php" method="post" name="form" onsubmit="return validate()">
-<h1 class="contact-title">お問い合わせ 内容入力</h1></div>
+<form name="contact"><form action="confirm.php" method="post" name="form" onsubmit="return validate()"></form>
+<div id="contact-title"><h1>お問い合わせ フォーム</h1></div>
+
 <div id="container">
             <div id="name">
-                <label>お名前</label>
+                <label><span>お名前:</span></label>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                 <input type="text" name="name" placeholder="例）山田太郎" value="">
             </div>
             <div id="email">
-                <label>メールアドレス</label>
+                <label><span>メールアドレス:</span></label>&nbsp
                 <input type="text" name="email" placeholder="例）guest@example.com" value="">
             </div>
             <div id="tel">
-<label><span>電話番号</span></label>
+                <label><span>電話番号:</span></label> &nbsp &nbsp &nbsp &nbsp &nbsp
                 <input type="text" name="tel" placeholder="例）00-0000-0000" value="">
             </div>
-            <div id="sex"><label>性別</label>
+            <div id="sex"><label><span>性別:</span></label>
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
                 <input type="radio" name="sex" value="男性" checked> 男性
                 <input type="radio" name="sex" value="女性"> 女性
             </div>
             <div ="contact_item">
-                <label>お問い合わせ項目</label>
+                <label><span>お問い合わせ項目:</span></label>
                     <select name="item">
                     <option value="">お問い合わせ項目を選択してください</option>
                     <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
@@ -36,12 +38,14 @@
                 </select>
             </div>
             <div>
-                <label>お問い合わせ内容</label>
+                <label><span>お問い合わせ内容:</span></label>
             </div>
             <div>
-                <textarea name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
+                <textarea name="contact_content" rows="5" cols="52" placeholder="お問合せ内容を入力してください"></textarea>
             </div>
-    </form>
+
+            <p><input type="submit" class="button" value="送信する"></p>
+
 </div>
 </body>
 </html>
